@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search & Game</title>
+    <style>
+        section {
+            width: 100px;
+            display: grid;
+            gap:5px;
+            grid-template-columns: repeat(4, 1fr);
+
+        }
+        input .create_num{
+            width:50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Jobs Here</h1>
+    <form action="/report" method="GET">
+        <input placeholder="search here" required name="keyword" />
+        <button>Search</button>
+    </form>
+
+    <form action="/lottery_num" method="GET">
+        <h1>Play Lottery Here</h1>
+        <h3>Create Numbers</h3>
+        <input placeholder="몇 장 필요하세요?" required name="amount" />
+        <button>Create!</button>
+    </form>
+
+    <form action="/lottery_to_win" method="GET">
+        
+        <h3>Start Estimating</h3>
+        <section>
+            <span><input type="number" min="1" max="45" class="create_num" required name="input_num" /></span>
+            <span><input type="number" min="1" max="45" class="create_num" required name="input_num" /></span>
+            <span><input type="number" min="1" max="45" class="create_num" required name="input_num" /></span>
+            <span><input type="number" min="1" max="45" class="create_num" required name="input_num" /></span>
+            <span><input type="number" min="1" max="45" class="create_num" required name="input_num" /></span>
+            <span><input type="number" min="1" max="45" class="create_num" required name="input_num" /></span>
+            <span><input type="number" min="1" max="45" class="create_num" required name="input_num" /></span>
+            <span><button class="guess_num">Estimate!</button></span>
+        </section>
+        
+    </form>
+
+    <form action="/lottery_check" method="GET">
+        
+        <h3>What If...</h3>
+        <section>
+            <span><input type="number" min="1" max="45" class="create_num" required name="input_num" /></span>
+            <span><input type="number" min="1" max="45" class="create_num" required name="input_num" /></span>
+            <span><input type="number" min="1" max="45" class="create_num" required name="input_num" /></span>
+            <span><input type="number" min="1" max="45" class="create_num" required name="input_num" /></span>
+            <span><input type="number" min="1" max="45" class="create_num" required name="input_num" /></span>
+            <span><input type="number" min="1" max="45" class="create_num" required name="input_num" /></span>
+            <span><input type="number" min="1" max="45" class="create_num" required name="input_num" /></span>
+            <span><button class="guess_num">Check!</button></span>
+        </section>
+        
+    </form>
+
+    <form action="/menu" method="GET">
+        <h1>Select Lunch</h1>
+        <button class="select">Select</button>
+    </form>
+</body>
+</html>

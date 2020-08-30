@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Lunch</title>
+    <style>
+        section {
+            display: grid;
+            gap:20px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Results</h1>
+    
+    <section>
+        <h3>Name</h3>
+        <h3>Link</h3>
+
+            {% for i in info %}
+                <span>{{i.name}}</span>
+                <a href="{{i.link}}" target=_blank>More..</a>
+                
+            {% endfor %}
+    </section>
+</body>
+</html>
